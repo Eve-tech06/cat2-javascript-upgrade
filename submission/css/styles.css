@@ -1,0 +1,134 @@
+:root {
+    --col-sunset: #ff9f43;
+   --col-coral: #ff6b6b;
+   --col-bg-light: rgba(16, 32, 48, 0.82);
+   --col-cyan: #00d5d8;
+
+   --col-cream: #fff7f0;
+   --col-light-blue: #f0f9ff;
+
+   --col-bg-deep: #102030;
+   --col-cyan-light: #7feaec;
+   --col-pink-soft: #ffb6c1;
+}
+
+
+section{
+    margin-bottom: 30px;
+    padding:32px;
+    background-color: var(--col-sunset);
+    border-radius: 5px;
+    border-left-style: solid;
+    border-left-color: var(--col-coral);
+    border-left-width: 7px;
+    transition: border-color 2s ease;   
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+    section:hover{
+    border-left-color:var(--col-cyan) ;
+}
+body {
+    font-family: 'Instrument Sans', sans-serif;
+      line-height: 1.6;
+}
+
+#logo img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+body{
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: var(--col-cream);
+    margin: 0;
+    line-height: 1.7;
+}
+
+h1{
+    font-family: 'Young-serif',serif;
+    font-size: 4rem;
+}
+h2{
+    font-family: 'Young-serif',serif;
+}
+
+header{
+    padding-top: 5px;
+    padding-bottom: 20px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: var(--col-cyan);
+    text-align: center;
+}
+nav ul li a{
+    color: var(--col-bg-deep);
+    text-decoration: none;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;    
+    padding: 8px 18px;
+    border: 1px solid var(--col-cyan-light) ;
+}
+    nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    list-style: none;
+    padding: 0;
+}
+
+
+
+nav ul li a:hover{
+    background-color: var(--col-pink-soft);
+    border-color: var(--col-cyan);
+}
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+@media (max-width: 768px) {
+
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    nav ul li a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    
+    h1 {
+        font-size: 32px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+ 
+    section {
+        padding: 20px;
+    }
+
+    
+    #logo img {
+        max-height: 250px;
+    }
+}
