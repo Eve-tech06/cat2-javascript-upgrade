@@ -112,7 +112,6 @@ main {
         width: 100%;
         text-align: center;
     }
-
     
     h1 {
         font-size: 32px;
@@ -121,12 +120,10 @@ main {
     h2 {
         font-size: 22px;
     }
-
  
     section {
         padding: 20px;
     }
-
     
     #logo img {
         max-height: 250px;
