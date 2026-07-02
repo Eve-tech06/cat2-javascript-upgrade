@@ -1,0 +1,21 @@
+1.Loop Rendered Dynamic content
+- I created a javascript array of objects to store a list of sservices that my client offers and their prices.
+I used forEach() to loop thorugh the array and display them.
+
+2. Dynamically Add & remove Elements
+- I created a wishlist, where customers can add what they want to learn using an input field and button. 
+New items are created using the createElement() and added with appendChild().
+And can be removed using the delete button.
+
+3.Form handling with validation feedback.
+- Created a form for users to enter their name , email and feedback.
+Used even.preventDefault tp prevent normal form submission. Used .value to read the user's input. Displays and error if the field is empty.
+And displays a success message if the form is completed.
+
+4.Persistent state with localStorage
+- I used localStorage.setItem() to save the user's name.
+And used localStorage.getItem() to retrieve the saverd name even after refreshing it remains in the name field box.
+
+5.Click-to-reveal on your banner
+-I added a caption describing the services. 
+The caption is hidden until the banner is clicked and did this using classList.toggle()
