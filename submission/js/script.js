@@ -103,6 +103,14 @@ feedbackForm.addEventListener("submit", function(event) {
     }
 });  
 
+//Click to reveal banner and caption
+let bannerImage = document.querySelector("#bannerImage");
+let bannerCaption = document.querySelector("#bannerCaption");
+
+bannerImage.addEventListener("click", function(){
+    bannerCaption.classList.toggle("hidden")
+});
+
 
 
 

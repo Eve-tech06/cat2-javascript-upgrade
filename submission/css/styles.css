@@ -131,4 +131,7 @@ main {
     #logo img {
         max-height: 250px;
     }
+    .hidden {
+    display: none;
+}
 }
