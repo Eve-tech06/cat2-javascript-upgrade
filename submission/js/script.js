@@ -11,6 +11,40 @@ services.forEach(function(service){
     console.log(service.price)
 });
 
+//Dynamically Add & Remove elements
+let wishListInput = document.querySelector("#wishlistInput");
+let wishListButton = document.querySelector("#wishlistForm button");
+let wishListItems = document.querySelector("#wishlistItems");
+
+wishListButton.addEventListener("click", function(event) {
+
+    // Prevent form submission
+    event.preventDefault();
+
+    let wishInputValue = wishListInput.value;
+
+    // Update the list if input is not empty
+    if (wishInputValue !== "") {
+
+        let li = document.createElement("li");
+        let button = document.createElement("button");
+
+        li.textContent = wishInputValue;
+        button.textContent = "Remove";
+
+        button.addEventListener("click", function() {
+            li.remove();
+        });
+
+        li.appendChild(button);
+        //appending list to the ul
+        wishListItems.appendChild(li);
+
+        // Clear what was typed in input
+        wishListInput.value = "";
+    }
+});
+
 
 
 
