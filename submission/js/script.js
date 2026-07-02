@@ -1,3 +1,10 @@
+//Auto refill the name in the input field(Persistence State)
+let savedName = localStorage.getItem("savedName");
+
+if (savedName) {
+    document.querySelector("#Name").value = savedName;
+}
+
 //a list of services stored in a JavaScript array
 let services = [
     {name: "IGCSE Exam Training" , price: 5000},
@@ -52,7 +59,49 @@ deleteButtons.forEach(button => {
         button.closest("li").remove();
     });
 });
-    
+
+//Form handling and validation feedback
+  let feedbackForm = document.querySelector("#feedbackForm");
+let feedbackOutput = document.querySelector("#feedbackOutput");
+
+feedbackForm.addEventListener("submit", function(event) {
+
+    // Prevent form from submitting normally
+    event.preventDefault();
+
+    const name = document.querySelector("#Name");
+    const email = document.querySelector("#Email");
+    const message = document.querySelector("#Message");
+
+    // Validation
+    if (
+        name.value === "" ||
+        email.value === "" ||
+        message.value === ""
+    ) {
+
+        feedbackOutput.innerHTML =
+            "<p>Please fill in all fields before submitting.</p>";
+        feedbackOutput.style.color = "red";
+
+    } else {
+        feedbackOutput.innerHTML =
+            "<strong>Form Submitted Successfully</strong><br>" +
+            "<p>Name: " + name.value + "</p>" +
+            "<p>Email: " + email.value + "</p>" +
+            "<p>Message: " + message.value + "</p>";
+
+        feedbackOutput.style.color = "green";
+
+        //save the name
+        localStorage.setItem("savedName", name.value);
+
+        // Clear the form fields
+        name.value = "";
+        email.value = "";
+        message.value = "";
+    }
+});  
 
 
 
