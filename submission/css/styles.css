@@ -136,7 +136,7 @@ main {
    }
 
    .form-row button {
-        width: 20%;
+        width: 30%;
    }
    .lab-grid {
     display: grid;
@@ -187,5 +187,6 @@ textarea {
 .form-row input {
     flex: 1;
 }
+
 
 }
