@@ -44,6 +44,16 @@ wishListButton.addEventListener("click", function(event) {
         wishListInput.value = "";
     }
 });
+//delete an existing item
+        let deleteButtons = document.querySelectorAll(".deletebtn");
+
+deleteButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        button.closest("li").remove();
+    });
+});
+    
+
 
 
 
