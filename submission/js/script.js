@@ -12,11 +12,17 @@ let services = [
     {name: "Life Coaching Services" , price: 20000},
     {name: "Advanced French Tutoring" , price: 35000}
 ];
+
 //Printing out the array list using for each
-services.forEach(function(service){
-    console.log(service.name)
-    console.log(service.price)
+let servicesList = document.querySelector("#servicesList");
+
+services.forEach(function(service) {
+    let li = document.createElement("li");
+    li.textContent =
+        service.name + " - KSh " + service.price;
+    servicesList.appendChild(li);
 });
+
 
 //Dynamically Add & Remove elements
 let wishListInput = document.querySelector("#wishlistInput");
